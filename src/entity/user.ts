@@ -1,7 +1,8 @@
-import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity, OneToOne } from "typeorm";
+import { Card } from "./card";
 
 @Entity()
-export class User extends BaseEntity{
+export class User extends BaseEntity {
 
     @PrimaryGeneratedColumn()
     public id: number;
@@ -14,5 +15,8 @@ export class User extends BaseEntity{
 
     @Column()
     phone: string;
+
+    @OneToOne(() => Card, cards => cards.user)
+    cards: Card;
 
 }

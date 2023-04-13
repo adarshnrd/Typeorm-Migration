@@ -9,32 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = void 0;
+exports.ModelTemplate = void 0;
 const typeorm_1 = require("typeorm");
-const card_1 = require("./card");
-let User = class User extends typeorm_1.BaseEntity {
-};
+class ModelTemplate {
+}
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
-], User.prototype, "id", void 0);
+], ModelTemplate.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], User.prototype, "name", void 0);
+], ModelTemplate.prototype, "name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], User.prototype, "email", void 0);
+], ModelTemplate.prototype, "email", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], User.prototype, "phone", void 0);
-__decorate([
-    (0, typeorm_1.OneToOne)(() => card_1.Card, cards => cards.user),
-    __metadata("design:type", card_1.Card)
-], User.prototype, "cards", void 0);
-User = __decorate([
-    (0, typeorm_1.Entity)()
-], User);
-exports.User = User;
+], ModelTemplate.prototype, "phone", void 0);
+exports.ModelTemplate = ModelTemplate;

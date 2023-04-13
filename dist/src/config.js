@@ -12,7 +12,7 @@ exports.AppDataSource = new typeorm_1.DataSource({
     port: Number(process.env.DB_PORT) || 3306,
     username: process.env.DB_USER || 'root',
     password: 'Password123#@!',
-    database: process.env.DB_NAME || 'Test_Migration',
+    database: process.env.DB_NAME || 'TestMigration',
     synchronize: false,
     entities: [user_1.User, card_1.Card],
     logging: true,

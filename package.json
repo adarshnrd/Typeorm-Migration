@@ -8,6 +8,7 @@
     "build": "tsc --build ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.ts",
+    "dev": "ts-node -P ./tsconfig.json  src/index",
     "migrate:create": "typeorm migration:create -o migration/PostRefactoring",
     "migrate:generate": "typeorm migration:generate -o migration/Refactor -d ./dist/src/config.js",
     "migrate:revert": "typeorm migration:revert -d ./dist/src/config.js",
